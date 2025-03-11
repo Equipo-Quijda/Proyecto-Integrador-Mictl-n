@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Proyecto Integrador Mictlán
 
 ## Acerca de Nosotros
@@ -64,3 +63,7 @@ Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE)
 =======
 # Proyecto-Integrador-Mictl-n
 >>>>>>> cd38202 (Initial commit)
+=======
+# ad-l4
+AD-07-1 The blog Site - Group
+>>>>>>> 51469f7 (Add files via upload)
