@@ -203,6 +203,21 @@ body {
   border-radius: 3px;
 }
 
+#boton-enviar-contacto{
+  background: linear-gradient(to right, #00d6ac, #1d2227);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transform: background 1s ease;
+}
+
+#boton-enviar-contacto:hover{
+  background: linear-gradient(to right, #1d2227, #00d6ac);
+  transform: background 1s ease;
+}
+
 .description {
   font-size: 16px;
   margin-top: 15px;
