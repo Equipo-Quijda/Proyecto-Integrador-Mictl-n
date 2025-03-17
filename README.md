@@ -60,10 +60,4 @@ Las contribuciones son bienvenidas. Por favor, sigue los siguientes pasos para c
 ## Licencia
 
 Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
-=======
-# Proyecto-Integrador-Mictl-n
->>>>>>> cd38202 (Initial commit)
-=======
-# ad-l4
-AD-07-1 The blog Site - Group
->>>>>>> 51469f7 (Add files via upload)
+>>>>>>> 94d5e6d (Subidas las imagenes faltantes, eliminando archivos extras y acomodando detalles)
