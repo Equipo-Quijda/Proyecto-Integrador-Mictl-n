@@ -12,6 +12,7 @@ body {
   background-color: var(--secondary-color);
   color: #ffffff;
   line-height: 1.8;
+  margin: 0;
 }
 
 /* Navegación */
@@ -125,6 +126,24 @@ footer {
 footer h4 {
   color: var(--accent-color);
   margin-bottom: 25px;
+}
+
+.card-body{
+  background-color: black;
+  color: white;
+  border:none;
+  border-radius: 30px;
+}
+
+.card{
+  background-color: black;
+  color: white;
+  border:none;
+  border-radius: 30px;
+}
+
+.contact-icon{
+  margin: 15px;
 }
 
 .social-icon {
