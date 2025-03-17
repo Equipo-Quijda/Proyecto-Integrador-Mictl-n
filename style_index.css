@@ -63,7 +63,6 @@ body {
   background-color: var(--secondary-color);
   color: white;
   padding: 100px 0;
-  margin-bottom: 50px;
   position: relative;
   overflow: hidden;
   box-shadow: inset 0 -10px 20px rgba(0, 0, 0, 0.1);
@@ -188,7 +187,6 @@ em {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-<<<<<<< HEAD
 .side-content h3 {
   color: var(--light-color);
   font-size: 1.3rem;
@@ -361,100 +359,4 @@ footer p {
   color: var(--light-color);
   font-family: 'Playfair Display', serif;
   font-weight: bold;
-=======
-input[type="submit"]:hover {
-  background-color: #45a049;
-}
-
-a {
-  text-decoration: none;
-}
-
-
-a:visited {
-  color: white;
-}
-
-a:hover {
-  color: aqua;
-  font-size: 25px;
-}
-
-footer{
-  background-color: #555;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  text-align: end;
-}
-
-footer p{
-  color: white;
-  text-align: start;
-  margin-right: 40px;
-  font-size: 15px;
-}
-
-.content{
-  margin: 30px;
-}
-
-.container {
-  margin-top: 30px;
-}
-
-.card {
-  margin-bottom: 20px;
-}
-
-.card-body {
-  padding: 20px;
-}
-
-.titulosAbout {
-  font-size: 24px;
-  color: rgb(60, 91, 196);
-  text-align: center;
-  background-color: black;
-  margin: 0;
-  padding: 10px;
-}
-
-.columna-card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#infoAbout {
-  font-size: 16px;
-  color: #333;
-  text-align: justify;
-  padding-top: 15px;
-}
-
-#headerimg {
-  width: 50px;
-}
-
-/* Estilos de las columnas de Misión, Visión y Valores con Bootstrap */
-.container {
-  margin-top: 30px;
-}
-
-.col-12 {
-  padding: 15px;
-}
-
-.col-md-4 {
-  margin-bottom: 20px;
-}
-
-/* Asegurar que las columnas se distribuyan bien en pantallas pequeñas */
-@media (max-width: 768px) {
-  .col-md-4 {
-    margin-bottom: 15px;
-  }
->>>>>>> bf3cb7d9d3f98184cdecbf8a5d98a4b1b89baaea
 }
