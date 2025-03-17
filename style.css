@@ -211,6 +211,7 @@ body {
   font-size: 16px;
   cursor: pointer;
   transform: background 1s ease;
+  border-radius: 30px;
 }
 
 #boton-enviar-contacto:hover{
