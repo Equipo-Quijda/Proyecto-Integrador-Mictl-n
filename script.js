@@ -2,6 +2,71 @@ let rutaJson = './backend/equipo.json';
 let container = '.carousel-inner';
 let botonesCarusel = '.carousel-indicators';
 let $ = element => document.querySelector(element);
+document.addEventListener('DOMContentLoaded', function() {
+    // Seleccionar elementos necesarios
+    const cardProduct = document.querySelector('.card-product');
+    const botonCarrito = document.querySelector('.buy');
+    const selectorCantidad = document.querySelector('.selector-cantidad');
+    const inputCantidad = selectorCantidad.querySelector('input[type=number]');
+
+    // Función para añadir al carrito
+    function añadirAlCarrito() {
+        const producto = {
+            nombre: 'Cerveza Quijada',
+            precio: 66.50,
+            cantidad: parseInt(inputCantidad.value) || 1
+        };
+
+        // Ejemplo simple de almacenamiento en localStorage
+        let carrito = [];
+        
+        // Intenta obtener el carrito existente
+        try {
+            const carritoGuardado = localStorage.getItem('carrito');
+            if (carritoGuardado) {
+                carrito = JSON.parse(carritoGuardado);
+            }
+        } catch(error) {
+            carrito = [];
+        }
+
+        // Agregar el nuevo producto al carrito con push
+        if (Array.isArray(carrito)) {
+            carrito.push(producto);
+        } else {
+            carrito = [producto];
+        }
+        
+        // Guardar en localStorage
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+
+        // Animación de añadido
+        botonCarrito.textContent = '¡Añadido!';
+        botonCarrito.style.backgroundColor = '#00d6ac';
+        
+        // Volver al texto original después de 2 segundos
+        setTimeout(() => {
+            botonCarrito.textContent = 'Añadir al carrito';
+            botonCarrito.style.backgroundColor = '#ffce00';
+        }, 2000);
+
+        console.log('Producto añadido:', producto);
+    }
+
+    // Evento para añadir al carrito
+    if (botonCarrito) {
+        botonCarrito.addEventListener('click', añadirAlCarrito);
+    }
+
+    // Validar entrada de cantidad
+    if (inputCantidad) {
+        inputCantidad.addEventListener('change', () => {
+            const valor = parseInt(inputCantidad.value);
+            if (isNaN(valor) || valor < 1) inputCantidad.value = 1;
+            if (valor > 10) inputCantidad.value = 10;
+        });
+    }
+});
 
 cargarTarjetasDesarrolladores(rutaJson, container);
 
