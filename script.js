@@ -2,6 +2,7 @@ let rutaJson = './backend/equipo.json';
 let container = '.carousel-inner';
 let botonesCarusel = '.carousel-indicators';
 let $ = element => document.querySelector(element);
+// Función principal al cargar el DOM
 
 cargarTarjetasDesarrolladores(rutaJson, container);
 
