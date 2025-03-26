@@ -18,12 +18,13 @@ body {
 .navbar {
   background-color: var(--primary-color);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 12px 0;
+
 }
 
 .navbar-brand img {
   height: 50px;
   transition: transform 0.3s ease;
+  margin: 0px;
 }
 
 .navbar-brand img:hover {
@@ -56,6 +57,10 @@ body {
 
 .nav-link:hover::after {
   width: 100%;
+}
+
+.nav-link.active{
+  color: var(--accent-color) !important;
 }
 
 /* Sección de bienvenida con calidez */

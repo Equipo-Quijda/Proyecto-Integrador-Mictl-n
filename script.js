@@ -4,66 +4,6 @@ let botonesCarusel = '.carousel-indicators';
 let $ = element => document.querySelector(element);
 // Función principal al cargar el DOM
 
-document.addEventListener('DOMContentLoaded', function() {
-    // ========== [Código para el producto] ==========
-    const botonCarrito = document.querySelector('.buy');
-    const inputCantidad = document.querySelector('.selector-cantidad input[type=number]');
-    const priceElement = document.querySelector('.price');
-    const originalPrice = 66.50; // Precio unitario fijo
-
-    // Función para actualizar el precio al cambiar la cantidad
-    function actualizarPrecio() {
-        const cantidad = parseInt(inputCantidad.value) || 1;
-        const nuevoPrecio = (originalPrice * cantidad).toFixed(2);
-        priceElement.innerHTML = `${nuevoPrecio.split('.')[0]}<small>.${nuevoPrecio.split('.')[1]}</small>$`;
-    }
-
-    // Función para añadir al carrito
-    function añadirAlCarrito() {
-        const producto = {
-            nombre: 'Cerveza Quijada',
-            precio: originalPrice,
-            cantidad: parseInt(inputCantidad.value) || 1
-        };
-
-        // Manejo del localStorage
-        let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-        carrito.push(producto);
-        localStorage.setItem('carrito', JSON.stringify(carrito));
-
-        // Feedback visual
-        botonCarrito.textContent = '¡Añadido!';
-        botonCarrito.style.backgroundColor = '#00d6ac';
-        setTimeout(() => {
-            botonCarrito.textContent = 'Añadir al carrito';
-            botonCarrito.style.backgroundColor = '#ffce00';
-        }, 2000);
-    }
-
-    // Event listeners
-    if (inputCantidad) {
-        inputCantidad.addEventListener('change', () => {
-            if (inputCantidad.value < 1) inputCantidad.value = 1;
-            if (inputCantidad.value > 10) inputCantidad.value = 10;
-            actualizarPrecio();
-        });
-
-        // Para los botones + y -
-        document.querySelectorAll('.boton-selector').forEach(boton => {
-            boton.addEventListener('click', () => setTimeout(actualizarPrecio, 10));
-        });
-    }
-
-    if (botonCarrito) {
-        botonCarrito.addEventListener('click', añadirAlCarrito);
-    }
-
-    // Inicializar precio
-    actualizarPrecio();
-
- 
-});
-
 cargarTarjetasDesarrolladores(rutaJson, container);
 
 async function cargarTarjetasDesarrolladores(rutaJson, containerSelector) {
