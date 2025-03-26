@@ -133,6 +133,7 @@ body {
 }
 
 .card{
+  display: flex;
   background-color: black;
   color: white;
   border:none;
@@ -391,7 +392,7 @@ p{
   padding: 10px;
   text-align: justify;
 }
-
+/*
 .card-product {
   position: relative;
   width: 320px;
@@ -497,4 +498,180 @@ p{
 .mouse {
   height: 300px;
   width: auto;
+}*/
+
+.card-product {
+  position: relative;
+  width: 320px;
+  height: 480px;
+  background: #00d6ac;
+  border-radius: 20px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.card-product::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  width: 100%;
+  height: 100%;
+  background: #d9a300;
+  transform: skewY(345deg);
+  transition: 0.5s;
+  z-index: 0;
+}
+
+.card-product:hover::before {
+  top: -70%;
+  transform: skewY(390deg);
+}
+
+.card-product::after {
+  content: "Mictlan";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-weight: 600;
+  font-size: 6em;
+  color: rgba(0, 0, 0, 0.1);
+  z-index: 0;
+}
+
+.card-product .imgBox {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0 20px;
+  z-index: 3;
+}
+
+.card-product .imgBox img {
+  max-width: 81%;
+  transition: .5s;
+  position: relative;
+  z-index: 3;
+  filter: drop-shadow(0 0 5px rgba(0,0,0));
+}
+
+.card-product:hover .imgBox img {
+  max-width: 50%;
+}
+
+.card-product .contentBox {
+  position: relative;
+  padding: 0 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  height: 160px;
+  justify-content: space-between;
+}
+
+.card-product .contentBox h3 {
+  font-size: 18px;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.card-product .contentBox .price {
+  font-size: 24px;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.buy {
+  background-color: #ffce00;
+  color: #000000;
+  border: none;
+  padding: 10px 20px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.buy:hover {
+  background-color: #e6b900;
+}
+
+.selector-cantidad {
+  display: flex;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.selector-cantidad input {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  margin: 0;
+  font-size: 0.9em;
+  padding: 0;
+  -moz-appearance: textfield;
+}
+
+.selector-cantidad input::-webkit-outer-spin-button,
+.selector-cantidad input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.boton-selector {
+  background-color: transparent;
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  font-size: 1em;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.boton-selector:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.cart-controls {
+  position: relative;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  transition: 0.5s;
+  transform: translateY(20px);
+}
+
+.card-product:hover .cart-controls {
+  opacity: 1;
+  transform: translateY(0);
 }
