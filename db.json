@@ -1,0 +1,31 @@
+{
+  "productos": [
+    {
+      "nombre": "Smirnof",
+      "precio": "550.00",
+      "cantidad": "50",
+      "presentacion": "20pzs",
+      "descripcion": "ghjbn",
+      "imagen": "https://t4.ftcdn.net/jpg/05/27/52/45/240_F_527524501_eLkzecmTNozQf6XvpAqa4pmYt1v9h0wW.jpg",
+      "id": "73ea"
+    },
+    {
+      "id": "a78f",
+      "nombre": "pulque2",
+      "precio": "30.00",
+      "cantidad": "50",
+      "presentacion": "6pzs",
+      "descripcion": "emborracha",
+      "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Pulquebottle.JPG/500px-Pulquebottle.JPG"
+    },
+    {
+      "id": "6595",
+      "nombre": "wisqui",
+      "precio": "1000.00",
+      "cantidad": "222",
+      "presentacion": "6pzs",
+      "descripcion": "jkksjbj",
+      "imagen": "https://media.istockphoto.com/id/459392019/es/foto/vodka-smirnoff-botella.jpg?s=2048x2048&w=is&k=20&c=xQXtb6PlI8AsiG97Vs3Gu1YDI1hDMxiiQ5K_Qb7W4Uo="
+    }
+  ]
+}
