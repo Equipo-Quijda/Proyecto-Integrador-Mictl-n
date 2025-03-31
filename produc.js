@@ -65,8 +65,8 @@ function cargarProductos() {
 
             productos.forEach(producto => {
                 const div = document.createElement("div");
-                div.classList.add("product-item");
-                div.textContent = `${producto.nombre} (${producto.presentacion}) - ${producto.cantidad}`;
+                div.classList.add("product-item");                
+                div.innerHTML = `<img src="${producto.imagen}" width="99px" height="99px"> ${producto.nombre} (${producto.presentacion}) - ${producto.cantidad}`;
                 div.style.cursor = 'pointer';
                 div.onclick = () => seleccionarProducto(div, producto);
                 lista.appendChild(div);
@@ -110,8 +110,9 @@ function editarProducto() {
         .then(response => response.json())
         .then(() => {
             alert("Producto actualizado correctamente");
-            limpiarCampos();
+            console.log(`${API_URL}/${productoSeleccionado.id}`)
             cargarProductos();
+            limpiarCampos();
         })
         .catch(error => console.error("Error al editar:", error));
 }
