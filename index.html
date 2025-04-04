@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mictlán - Bebidas Ancestrales</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">MICTLÁN</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fas fa-home"></i> INICIO</a></li>
+            <li><a href="productos.html"><i class="fas fa-wine-bottle"></i> BEBIDAS</a></li>
+            <li id="admin-link" style="display:none;"><a href="usuarios.html"><i class="fas fa-users-cog"></i> ADMIN</a></li>
+            <li><a href="#" id="login-link"><i class="fas fa-user-circle"></i> INGRESAR</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <div class="hero">
+            <h1>BEBIDAS DEL <span>INFRAMUNDO</span></h1>
+            <p>Descubre los sabores ancestrales de Mictlán</p>
+            <a href="productos.html" class="cta-button">EXPLORAR</a>
+        </div>
+    </main>
+
+    <script src="js/scripts.js"></script>
+    <script>
+        // Crear partículas
+        function createParticles() {
+            const container = document.getElementById('particles');
+            const particleCount = 30;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                const size = Math.random() * 4 + 2;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.bottom = `-${size}px`;
+                particle.style.animationDuration = `${Math.random() * 20 + 10}s`;
+                particle.style.animationDelay = `${Math.random() * 10}s`;
+                
+                container.appendChild(particle);
+            }
+        }
+        createParticles();
+    </script>
+</body>
+</html>

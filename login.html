@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mictlán - Acceso al Inframundo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">MICTLÁN</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fas fa-home"></i> INICIO</a></li>
+            <li><a href="#" id="login-link"><i class="fas fa-user-circle"></i> INGRESAR</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="login-container">
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Iniciando sesión en el Mictlán...</p>
+            </div>
+            
+            <h1 class="login-title">ACCESO AL INFRAMUNDO</h1>
+            
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="email"><i class="fas fa-envelope"></i> CORREO ELECTRÓNICO</label>
+                    <input type="email" id="email" required placeholder="tucorreo@mictlan.com">
+                </div>
+                
+                <div class="input-group">
+                    <label for="password"><i class="fas fa-key"></i> CONTRASEÑA</label>
+                    <input type="password" id="password" required placeholder="••••••••">
+                </div>
+                
+                <button type="submit" class="login-btn">
+                    <i class="fas fa-door-open"></i> ENTRAR AL MICTLÁN
+                </button>
+            </form>
+            
+            <div class="login-footer">
+                <p>¿Primera vez en el inframundo? <a href="#" id="registerLink">Regístrate aquí</a></p>
+                <p><a href="#" id="forgotLink">¿Olvidaste tu contraseña?</a></p>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/login.js"></script>
+    <script>
+        // Crear partículas flotantes
+        function createParticles() {
+            const container = document.getElementById('particles');
+            const particleCount = 30;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                const size = Math.random() * 4 + 2;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.bottom = `-${size}px`;
+                particle.style.animationDuration = `${Math.random() * 20 + 10}s`;
+                particle.style.animationDelay = `${Math.random() * 10}s`;
+                
+                container.appendChild(particle);
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            createParticles();
+        });
+    </script>
+</body>
+</html>
