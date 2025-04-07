@@ -1,8 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const navprod = document.getElementById('nav-productos');
+    const navusers = document.getElementById('nav-usuarios');
+    const navlogin = document.getElementById('login-in');
+    const navlogout = document.getElementById('login-out');
+
+    navlogout.addEventListener('click', () => logout());
+
     // Verificar sesión y actualizar navbar
     if(localStorage.getItem('mictlanUser')){
         const user = JSON.parse(localStorage.getItem('mictlanUser'));
         updateNavbar(user);
+        console.log("Holis......");
+    }else{
+        navprod.hidden = true;
+        navusers.hidden = true;
+        navlogin.hidden = false;
+        navlogout.hidden = true;
     }
 
     // Crear partículas en todas las páginas
@@ -10,49 +23,27 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function updateNavbar(user) {
-    const navbarNav = document.getElementById('navbarNav');
-    const navList = navbarNav?.querySelector('.navbar-nav');
-    
-    if (!navList) return;
-
-    // Remover elementos existentes de usuario si los hay
-    const existingUserItems = navList.querySelectorAll('.user-nav-item');
-    existingUserItems.forEach(item => item.remove());
+    const navprod = document.getElementById('nav-productos');
+    const navusers = document.getElementById('nav-usuarios');
+    const navlogin = document.getElementById('login-in');
+    const navlogout = document.getElementById('login-out');
     
     if (user) {
-        // Agregar elementos para usuario logueado
-        const userItem = document.createElement('li');
-        userItem.className = 'nav-item user-nav-item';
-        userItem.innerHTML = `
-            <a class="nav-link" href="./paginas/perfil.html">
-                <i class="fas fa-user-circle"></i> ${user.nombre.split(' ')[0]}
-            </a>
-        `;
         
+        navlogin.hidden = true;
+
         // Agregar link de admin si corresponde
         if (user.rol === 'admin') {
-            const adminItem = document.createElement('li');
-            adminItem.className = 'nav-item user-nav-item';
-            adminItem.innerHTML = `
-                <a class="nav-link" href="./paginas/usuarios.html">
-                    <i class="fas fa-users-cog"></i> Admin
-                </a>
-            `;
-            navList.appendChild(adminItem);
+            navprod.hidden = false;
+            navusers.hidden = false;
         }
         
-        navList.appendChild(userItem);
-        
-    } else {
-        // Agregar link de login para usuario no logueado
-        const loginItem = document.createElement('li');
-        loginItem.className = 'nav-item user-nav-item';
-        loginItem.innerHTML = `
-            <a class="nav-link" href="./paginas/login.html">
-                <i class="fas fa-user-circle"></i> INGRESAR
-            </a>
-        `;
-        navList.appendChild(loginItem);
+        navlogout.innerHTML = `<a class="nav-link" href="#">
+              <i class="fas fa-user"></i> ${user.nombre}
+          </a>`;
+
+        navlogout.hidden = false;
+
     }
 }
 
@@ -76,4 +67,14 @@ function createParticles() {
         
         container.appendChild(particle);
     }
+}
+
+function logout(){
+    if(localStorage.getItem('mictlanUser')){
+        localStorage.removeItem('mictlanUser');
+        console.log("Documento eliminado con exito......");
+        location.reload();
+    }
+
+    window.location.href = '../index.html';
 }

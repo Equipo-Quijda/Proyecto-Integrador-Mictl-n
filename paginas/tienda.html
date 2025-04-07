@@ -30,37 +30,48 @@
             <a class="nav-link" href="../index.html">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./about.html">Nuestra Historia</a>
+            <a class="nav-link" href="./about.html">Nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./contact.html">Encuéntranos</a>
+            <a class="nav-link" href="./contact.html">Contacto</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" href="./tienda.html">Tienda</a>
           </li>
-
           <li class="nav-item">
-            <span class="nav-link">|</span>
+            <a class="nav-link" href="#">
+              <i class="fas fa-shopping-cart"></i>
+            </a>
           </li>
           <li class="nav-item">
+            <span class="nav-link text-light">|</span>
+          </li>
+          <li class="nav-item" id="login-in">
             <a class="nav-link" href="./login.html">
               <i class="fas fa-user-shield"></i> Login
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" hidden id="login-out">
+            <a class="nav-link" href="../index.html">
+                <i class="fas fa-user"></i> Quijada
+            </a>
+        </li>
+        <li class="nav-item" hidden id="nav-productos">
             <a class="nav-link" href="./products.html">
-              <i class="fas fa-box"></i> Productos
+                <i class="fas fa-box"></i> Productos
             </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./users.html">
-              <i class="fas fa-users"></i> Usuarios
+        </li>
+        <li class="nav-item" hidden id="nav-usuarios">
+            <a class="nav-link active" href="./users.html">
+                <i class="fas fa-users"></i> Usuarios
             </a>
-          </li>
+        </li>
         </ul>
       </div>
     </div>
   </nav>
+
+  <div class="particles" id="particles"></div>
 
   <div class="container main-content">
     <h1>Tienda</h1>
@@ -102,6 +113,7 @@
   </footer>
 
   <script src="../backend/scripts/target.js"></script>
+  <script src="../backend/scripts/scripts.js"></script>
 </body>
 
 </html>

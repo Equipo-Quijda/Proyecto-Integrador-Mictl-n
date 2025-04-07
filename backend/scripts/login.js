@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Verificar si ya hay sesión activa
     if (localStorage.getItem('mictlanUser')) {
         const user = JSON.parse(localStorage.getItem('mictlanUser'));
-        window.location.href = user.rol === 'admin' ? 'usuarios.html' : 'perfil.html';
+        window.location.href = user.rol === 'admin' ? 'users.html' : '../index.html';
     }
 
     const loginForm = document.getElementById('loginForm');
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
             localStorage.setItem('mictlanUser', JSON.stringify(userToStore));
             
             // Redirigir según rol
-            window.location.href = user.rol === 'admin' ? 'usuarios.html' : 'perfil.html';
+            window.location.href = user.rol === 'admin' ? 'users.html' : './index.html';
         }, 1500);
     });
     
