@@ -1,4 +1,4 @@
-let rutaJson = './backend/product.json';
+let rutaJson = '../backend/product.json';
 let container = '.container-productos';
 let $ = element => document.querySelector(element);
 
