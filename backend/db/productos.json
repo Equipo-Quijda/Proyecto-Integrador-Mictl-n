@@ -1,0 +1,49 @@
+{
+  "productos": [
+    {
+      "nombre": "Pulque",
+      "precio": "60",
+      "cantidad": "4",
+      "presentacion": "20pzs",
+      "descripcion": "ghjbn",
+      "imagen": "./Pic/Productos/Pulque.jpg",
+      "id": "73ea"
+    },
+    {
+      "id": "a78f",
+      "nombre": "pulque2",
+      "precio": "30.00",
+      "cantidad": "50",
+      "presentacion": "6pzs",
+      "descripcion": "emborracha",
+      "imagen": "./Pic/Productos/Pulque.jpg"
+    },
+    {
+      "nombre": "wisqui",
+      "precio": "10.00",
+      "cantidad": "1",
+      "presentacion": "6pzs",
+      "descripcion": "jkksjbj",
+      "imagen": "https://media.istockphoto.com/id/459392019/es/foto/vodka-smirnoff-botella.jpg?s=2048x2048&w=is&k=20&c=xQXtb6PlI8AsiG97Vs3Gu1YDI1hDMxiiQ5K_Qb7W4Uo=",
+      "id": "6595"
+    },
+    {
+      "id": "6406",
+      "nombre": "pulque2",
+      "precio": "30.00",
+      "cantidad": "5",
+      "presentacion": "6pzs",
+      "descripcion": "emborracha",
+      "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Pulquebottle.JPG/500px-Pulquebottle.JPG"
+    },
+    {
+      "nombre": "pulque2",
+      "precio": "30.00",
+      "cantidad": "20",
+      "presentacion": "6pzs",
+      "descripcion": "emborracha",
+      "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Pulquebottle.JPG/500px-Pulquebottle.JPG",
+      "id": "14a9"
+    }
+  ]
+}
