@@ -1,49 +1,49 @@
 {
   "productos": [
     {
-      "nombre": "Pulque",
-      "precio": "60",
+      "id": "1",
+      "nombre": "Pulque Tradicional",
+      "precio": "60.00",
       "cantidad": "4",
       "presentacion": "20pzs",
-      "descripcion": "ghjbn",
-      "imagen": "./Pic/Productos/Pulque.jpg",
-      "id": "73ea"
-    },
-    {
-      "id": "a78f",
-      "nombre": "pulque2",
-      "precio": "30.00",
-      "cantidad": "50",
-      "presentacion": "6pzs",
-      "descripcion": "emborracha",
+      "descripcion": "Pulque artesanal 100% natural, elaborado con aguamiel de maguey. Sabor tradicional con notas dulces y ligeramente ácidas. Perfecto para acompañar comidas típicas mexicanas.",
       "imagen": "./Pic/Productos/Pulque.jpg"
     },
     {
-      "nombre": "wisqui",
+      "id": "2",
+      "nombre": "Pulque Curado de Fresa",
+      "precio": "30.00",
+      "cantidad": "50",
+      "presentacion": "6pzs",
+      "descripcion": "Pulque artesanal saborizado con fresas naturales. Combina la tradición del pulque con el dulce sabor de la fresa. Ideal para quienes buscan una experiencia refrescante.",
+      "imagen": "./Pic/Productos/Pulque.jpg"
+    },
+    {
+      "id": "3",
+      "nombre": "Whisky Premium",
       "precio": "10.00",
       "cantidad": "1",
       "presentacion": "6pzs",
-      "descripcion": "jkksjbj",
-      "imagen": "https://media.istockphoto.com/id/459392019/es/foto/vodka-smirnoff-botella.jpg?s=2048x2048&w=is&k=20&c=xQXtb6PlI8AsiG97Vs3Gu1YDI1hDMxiiQ5K_Qb7W4Uo=",
-      "id": "6595"
+      "descripcion": "Whisky de alta calidad con notas ahumadas y de caramelo. Perfecto para disfrutar solo o en cocteles. Ideal para ocasiones especiales.",
+      "imagen": "https://media.istockphoto.com/id/459392019/es/foto/vodka-smirnoff-botella.jpg?s=2048x2048&w=is&k=20&c=xQXtb6PlI8AsiG97Vs3Gu1YDI1hDMxiiQ5K_Qb7W4Uo="
     },
     {
-      "id": "6406",
-      "nombre": "pulque2",
+      "id": "4",
+      "nombre": "Pulque Curado de Mango",
       "precio": "30.00",
       "cantidad": "5",
       "presentacion": "6pzs",
-      "descripcion": "emborracha",
+      "descripcion": "Pulque artesanal con sabor a mango natural. Combina la tradición del pulque con el exótico sabor tropical del mango. Una experiencia única para el paladar.",
       "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Pulquebottle.JPG/500px-Pulquebottle.JPG"
     },
     {
-      "nombre": "pulque2",
+      "id": "5",
+      "nombre": "Pulque Curado de Piña",
       "precio": "30.00",
       "cantidad": "20",
       "presentacion": "6pzs",
-      "descripcion": "emborracha",
-      "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Pulquebottle.JPG/500px-Pulquebottle.JPG",
-      "id": "14a9"
+      "descripcion": "Pulque artesanal con sabor a piña natural. La combinación perfecta entre la tradición del pulque y el refrescante sabor de la piña. Ideal para reuniones y celebraciones.",
+      "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Pulquebottle.JPG/500px-Pulquebottle.JPG"
     }
   ]
 }

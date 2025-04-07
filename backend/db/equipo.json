@@ -2,151 +2,151 @@
     {
         "id": 1,
         "nombre": "Jose Ian Perez Gomez",
-        "foto": "pic/ian.webp",
+        "foto": "../pic/ian.webp",
         "puesto": "Desarrollador",
         "descripcion": "Desarrollador, entusiasta de la tecnología y creyente en el aprendizaje continuo.",
         "linkedin": "https://www.linkedin.com/in/jose-ian",
         "github": "https://github.com/Wegenner",
         "gmail": "mailto:Josian.pg@gmail.com",
         "iconos": {
-            "linkedin": "iconos/linkedin.png",
-            "github": "iconos/github.png",
-            "gmail": "iconos/gmail.png"
+            "linkedin": "../iconos/linkedin.png",
+            "github": "../iconos/github.png",
+            "gmail": "../iconos/gmail.png"
         }
     },
     {
         "id": 2,
         "nombre": "Eliezer Fernando Perez Hernandez",
-        "foto": "pic/eli.webp",
+        "foto": "../pic/eli.webp",
         "puesto": "Desarrollador Junior",
-        "descripcion": "Soy un Desarrollador Junior en formación con conocimiento básico y mucha iniciativa lo cual me ha llevado a participar en el desarrollo de un e-commerce, me encuentro en busca de experiencia para continuar mi instrucción en el mundo de TI con deseos y afinidad a especialista en software, tester o QA.",
+        "descripcion": "Desarrollador Junior en formación, con iniciativa y enfoque en software, testing y QA.",
         "linkedin": "https://www.linkedin.com/in/eliezer-fernando",
         "github": "https://github.com/Eli-Fer",
         "gmail": "mailto:tcscorpeli@gmail.com",
         "iconos": {
-            "linkedin": "iconos/linkedin.png",
-            "github": "iconos/github.png",
-            "gmail": "iconos/gmail.png"
+            "linkedin": "../iconos/linkedin.png",
+            "github": "../iconos/github.png",
+            "gmail": "../iconos/gmail.png"
         }
     },
     {
         "id": 3,
         "nombre": "Edgar Antonio Meléndez Reyes",
-        "foto": "pic/edgar.webp",
+        "foto": "../pic/edgar.webp",
         "puesto": "Desarrollador Backend",
-        "descripcion": "Soy Edgar, desarrollador de software especializado en Backend con Java y Spring Boot. Me apasiona la tecnología y tengo experiencia en bases de datos. Si deseas colaborar o tienes alguna consulta, ¡contáctame!",
+        "descripcion": "Desarrollador especializado en Backend con Java y Spring Boot, apasionado por la tecnología y bases de datos.",
         "linkedin": "https://www.linkedin.com/in/edgar-antonio",
         "github": "https://github.com/Pikolin14",
         "gmail": "mailto:edgarantoniomelendezreyes@gmail.com",
         "iconos": {
-            "linkedin": "iconos/linkedin.png",
-            "github": "iconos/github.png",
-            "gmail": "iconos/gmail.png"
+            "linkedin": "../iconos/linkedin.png",
+            "github": "../iconos/github.png",
+            "gmail": "../iconos/gmail.png"
         }
     },
     {
         "id": 4,
         "nombre": "Raziel Gutiérrez Moncayo",
-        "foto": "pic/Raziel.webp",
+        "foto": "../pic/Raziel.webp",
         "puesto": "Desarrollador Java Fullstack Jr.",
-        "descripcion": "Desarrollador Java Fullstack Jr., enfocado en la mejora continua y el crecimiento profesional, creando soluciones optimizadas.",
+        "descripcion": "Desarrollador Java Fullstack Jr., enfocado en la mejora continua y soluciones optimizadas.",
         "linkedin": "https://www.linkedin.com/in/raziel-gutierrez",
         "github": "https://github.com/RazielGMoncayo",
         "gmail": "mailto:razielgmoncayo@gmail.com",
         "iconos": {
-            "linkedin": "iconos/linkedin.png",
-            "github": "iconos/github.png",
-            "gmail": "iconos/gmail.png"
+            "linkedin": "../iconos/linkedin.png",
+            "github": "../iconos/github.png",
+            "gmail": "../iconos/gmail.png"
         }
     },
     {
         "id": 5,
         "nombre": "Jorge Fernando Castillo Sanjuan",
-        "foto": "pic/Fernando.webp",
+        "foto": "../pic/Fernando.webp",
         "puesto": "Desarrollador Full Stack Jr.",
-        "descripcion": "Desarrollador Full Stack Jr, enfocado en Front End y diseño de experiencias de usuario, Me gusta diseñar y crear animaciones, además de brindar experiencias accesibles y funcionales.",
+        "descripcion": "Desarrollador Full Stack Jr, especializado en Front End, diseño de UX y animaciones interactivas.",
         "linkedin": "https://www.linkedin.com/in/jorge-fernando",
         "github": "https://github.com/fernandodev77",
         "gmail": "mailto:fernando.castillosan7@gmail.com",
         "iconos": {
-            "linkedin": "iconos/linkedin.png",
-            "github": "iconos/github.png",
-            "gmail": "iconos/gmail.png"
+            "linkedin": "../iconos/linkedin.png",
+            "github": "../iconos/github.png",
+            "gmail": "../iconos/gmail.png"
         }
     },
     {
         "id": 6,
         "nombre": "Christian Gerardo Lira Tienda",
-        "foto": "pic/Lira.webp",
+        "foto": "../pic/Lira.webp",
         "puesto": "Desarrollador Fullstack Junior",
-        "descripcion": "Soy un desarrollador Fullstack Junior con experiencia en la creación de aplicaciones web. Me apasiona aprender nuevas tecnologías y afrontar retos técnicos, me esfuerzo por mejorar continuamente mis habilidades, colaborando en equipos ágiles y trabajando estrechamente con diseñadores y otros desarrolladores para ofrecer productos funcionales y bien optimizados.",
+        "descripcion": "Desarrollador Fullstack Junior, apasionado por la innovación tecnológica y el trabajo en equipo.",
         "linkedin": "https://www.linkedin.com/in/christian-gerardo",
         "github": "https://github.com/ChrisLira1",
         "gmail": "mailto:lic.lirag@gmail.com",
         "iconos": {
-            "linkedin": "iconos/linkedin.png",
-            "github": "iconos/github.png",
-            "gmail": "iconos/gmail.png"
+            "linkedin": "../iconos/linkedin.png",
+            "github": "../iconos/github.png",
+            "gmail": "../iconos/gmail.png"
         }
     },
     {
         "id": 7,
         "nombre": "Gustavo Salmeron Ruiz",
-        "foto": "pic/Gus.webp",
+        "foto": "../pic/Gus.webp",
         "puesto": "Desarrollador Full-Stack Jr.",
-        "descripcion": "Desarrollador Full-Stack Jr. y futuro ingeniero de software. Integrante del Bootcamp Generation México. Particpé en el desarrollo del Front-end y Back-end de este sitio web.",
+        "descripcion": "Desarrollador Full-Stack Jr. y futuro ingeniero de software, participante del Bootcamp Generation México.",
         "linkedin": "https://www.linkedin.com/in/gustavo-salmeron",
         "github": "https://github.com/Azmur97",
         "gmail": "mailto:salmeronruizgustavo@gmail.com",
         "iconos": {
-            "linkedin": "iconos/linkedin.png",
-            "github": "iconos/github.png",
-            "gmail": "iconos/gmail.png"
+            "linkedin": "../iconos/linkedin.png",
+            "github": "../iconos/github.png",
+            "gmail": "../iconos/gmail.png"
         }
     },
     {
         "id": 8,
         "nombre": "Luis Mario Emmanuel Ibarra Chávez",
-        "foto": "pic/file.webp",
+        "foto": "../pic/file.webp",
         "puesto": "Desarrollador Fullstack",
-        "descripcion": "Soy un ser humano en construcción, con sólida experiencia en desarrollo front y backend. Mi compromiso con el aprendizaje continuo me permite ofrecer soluciones innovadoras.",
+        "descripcion": "Desarrollador Fullstack con experiencia en front y backend, comprometido con el aprendizaje continuo.",
         "linkedin": "https://www.linkedin.com/in/luis-mario",
         "github": "https://github.com/devicmario",
         "gmail": "mailto:devicmario001@gmail.com",
         "iconos": {
-            "linkedin": "iconos/linkedin.png",
-            "github": "iconos/github.png",
-            "gmail": "iconos/gmail.png"
+            "linkedin": "../iconos/linkedin.png",
+            "github": "../iconos/github.png",
+            "gmail": "../iconos/gmail.png"
         }
     },
     {
         "id": 9,
         "nombre": "Cristian Sahit Zamora Bravo",
-        "foto": "pic/sahit.webp",
+        "foto": "../pic/sahit.webp",
         "puesto": "Desarrollador Full-Stack",
-        "descripcion": "Soy un desarrollador Full-Stack con una formación en ingeniería en sistemas computacionales.",
+        "descripcion": "Desarrollador Full-Stack con formación en ingeniería en sistemas computacionales.",
         "linkedin": "https://www.linkedin.com/in/cristian-sahit",
         "github": "https://github.com/CristianSahit",
         "gmail": "mailto:cristian.sahit@gmail.com",
         "iconos": {
-            "linkedin": "iconos/linkedin.png",
-            "github": "iconos/github.png",
-            "gmail": "iconos/gmail.png"
+            "linkedin": "../iconos/linkedin.png",
+            "github": "../iconos/github.png",
+            "gmail": "../iconos/gmail.png"
         }
     },
     {
         "id": 10,
         "nombre": "Jorge Obed Arroyo Alvarez",
-        "foto": "pic/Jorge.webp",
+        "foto": "../pic/Jorge.webp",
         "puesto": "Desarrollador FullStack Jr.",
-        "descripcion": "Desarrollaor FullStack jr. Amante de los desafios y del constante aprendizaje.",
+        "descripcion": "Desarrollador FullStack Jr., apasionado por los desafíos y el aprendizaje constante.",
         "linkedin": "https://www.linkedin.com/in/jorge-obed",
         "github": "https://github.com/JorgeArroyoAlvarez",
         "gmail": "mailto:arroyoalvarezjorge@gmail.com",
         "iconos": {
-            "linkedin": "iconos/linkedin.png",
-            "github": "iconos/github.png",
-            "gmail": "iconos/gmail.png"
+            "linkedin": "../iconos/linkedin.png",
+            "github": "../iconos/github.png",
+            "gmail": "../iconos/gmail.png"
         }
     }
 ]

@@ -5,14 +5,14 @@
       "nombre": "Christian Gerardo Lira Tienda",
       "email": "christian.lira@example.com",
       "rol": "administrador",
-      "foto": "../Proyecto-Integrador-Mictl-n/Pic/Lira.webp"
+      "foto": "./Pic/Lira.webp"
     },
     {
       "id": 1,
       "nombre": "Cristian Sahit Zamora Bravo",
       "email": "cristian.zamora@example.com",
       "rol": "administrador",
-      "foto": "../Proyecto-Integrador-Mictl-n/Pic/sahit.webp"
+      "foto": "./Pic/sahit.webp"
     },
     {
       "id": 2,
