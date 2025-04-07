@@ -60,3 +60,4 @@ Las contribuciones son bienvenidas. Por favor, sigue los siguientes pasos para c
 ## Licencia
 
 Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+>>>>>>> 94d5e6d (Subidas las imagenes faltantes, eliminando archivos extras y acomodando detalles)

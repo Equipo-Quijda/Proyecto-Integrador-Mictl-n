@@ -1,0 +1,74 @@
+{
+"usuario": [
+    {
+      "id": 0,
+      "nombre": "Christian Gerardo Lira Tienda",
+      "email": "christian.lira@example.com",
+      "rol": "administrador",
+      "foto": "../Pic/Lira.webp"
+    },
+    {
+      "id": 1,
+      "nombre": "Cristian Sahit Zamora Bravo",
+      "email": "cristian.zamora@example.com",
+      "rol": "administrador",
+      "foto": "../Pic/sahit.webp"
+    },
+    {
+      "id": 2,
+      "nombre": "Edgar Antonio Meléndez Reyes",
+      "email": "edgar.melendez@example.com",
+      "rol": "administrador",
+      "foto": "../Pic/Edgar.webp"
+    },
+    {
+      "id": 3,
+      "nombre": "Eliezer Fernando Pérez Hernández",
+      "email": "eliezer.perez@example.com",
+      "rol": "administrador",
+      "foto": "../Pic/Eli.webp"
+    },
+    {
+      "id": 4,
+      "nombre": "Gustavo Salmeron Ruiz",
+      "email": "gustavo.salmeron@example.com",
+      "rol": "administrador",
+      "foto": "../Pic/Gus.webp"
+    },
+    {
+      "id": 5,
+      "nombre": "Jorge Fernando Castillo Sanjuan",
+      "email": "jorge.castillo@example.com",
+      "rol": "administrador",
+      "foto": "../Pic/Fernando.webp"
+    },
+    {
+      "id": 6,
+      "nombre": "Jorge Obed Arroyo Alvarez",
+      "email": "jorge.arroyo@example.com",
+      "rol": "administrador",
+      "foto": "../Pic/Jorge.webp"
+    },
+    {
+      "id": 7,
+      "nombre": "Jose Ian Pérez Gómez",
+      "email": "jose.perez@example.com",
+      "rol": "administrador",
+      "foto": "../Pic/Ian.webp"
+    },
+    {
+      "id": 8,
+      "nombre": "Luis Mario Emanuel Ibarra Chávez",
+      "email": "luis.ibarra@example.com",
+      "rol": "administrador",
+      "foto": "../Pic/file.webp"
+    },
+    {
+      "id": 9,
+      "nombre": "Raziel Gutierrez Moncayo",
+      "email": "raziel.gutierrez@example.com",
+      "rol": "administrador",
+      "foto": "../Pic/Raziel.webp"
+    }
+  ]
+}

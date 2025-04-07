@@ -1,0 +1,31 @@
+{
+  "productos": [
+    {
+      "nombre": "Whisky Premium",
+      "precio": "10.00",
+      "cantidad": "2",
+      "presentacion": "6pzs",
+      "descripcion": "Whisky de alta calidad con notas ahumadas y de caramelo. Perfecto para disfrutar solo o en cocteles. Ideal para ocasiones especiales.",
+      "imagen": "https://media.istockphoto.com/id/459392019/es/foto/vodka-smirnoff-botella.jpg?s=2048x2048&w=is&k=20&c=xQXtb6PlI8AsiG97Vs3Gu1YDI1hDMxiiQ5K_Qb7W4Uo=",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "nombre": "Pulque Curado de Mango",
+      "precio": "30.00",
+      "cantidad": "5",
+      "presentacion": "6pzs",
+      "descripcion": "Pulque artesanal con sabor a mango natural. Combina la tradición del pulque con el exótico sabor tropical del mango. Una experiencia única para el paladar.",
+      "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Pulquebottle.JPG/500px-Pulquebottle.JPG"
+    },
+    {
+      "id": "3",
+      "nombre": "Pulque Curado de Piña",
+      "precio": "30.00",
+      "cantidad": "20",
+      "presentacion": "6pzs",
+      "descripcion": "Pulque artesanal con sabor a piña natural. La combinación perfecta entre la tradición del pulque y el refrescante sabor de la piña. Ideal para reuniones y celebraciones.",
+      "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Pulquebottle.JPG/500px-Pulquebottle.JPG"
+    }
+  ]
+}

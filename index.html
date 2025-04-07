@@ -10,14 +10,14 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="./style_index.css">
+  <link rel="stylesheet" href="../backend/css/style_index.css">
 </head>
 
 <body>
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container">
-      <a class="navbar-brand" href="./index.html">
+      <a class="navbar-brand" href="/index.html">
         <img src="./Pic/logo-mictlan.jpg" alt="Logo Mictlan">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -30,14 +30,42 @@
             <a class="nav-link active" href="./index.html">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./aboutus.html">Nuestra Historia</a>
+            <a class="nav-link" href="./paginas/about.html">Nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./contact.html">Encuéntranos</a>
+            <a class="nav-link" href="./paginas/contact.html">Contacto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./productos.html">Tienda</a>
+            <a class="nav-link" href="./paginas/tienda.html">Tienda</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fas fa-shopping-cart"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <span class="nav-link text-light">|</span>
+          </li>
+          <li class="nav-item" id="login-in">
+            <a class="nav-link" href="./paginas/login.html">
+              <i class="fas fa-user-shield"></i> Login
+            </a>
+          </li>
+          <li class="nav-item" hidden id="login-out">
+            <a class="nav-link" href="#">
+                <i class="fas fa-user"></i> Quijada
+            </a>
+        </li>
+        <li class="nav-item" hidden id="nav-productos">
+            <a class="nav-link" href="./paginas/products.html">
+                <i class="fas fa-box"></i> Productos
+            </a>
+        </li>
+        <li class="nav-item" hidden id="nav-usuarios">
+            <a class="nav-link active" href="./paginas/users.html">
+                <i class="fas fa-users"></i> Usuarios
+            </a>
+        </li>
         </ul>
       </div>
     </div>
@@ -56,6 +84,8 @@
     </div>
   </section>
 
+  <div class="particles" id="particles"></div>
+
   <!-- Main Content -->
   <div class="container">
 
@@ -67,7 +97,8 @@
           <em>MICTLAN</em>! Nacimos de un sueño compartido y del amor por nuestra tierra. ¿Sabías que nuestra región es
           cuna de tierras fértiles donde el agave crece orgulloso? De estas plantas majestuosas nacen las bebidas que
           han dado identidad a nuestro pueblo durante generaciones: el pulque que refrescaba a nuestros abuelos y el
-          mezcal que calentaba sus conversaciones.</p>
+          mezcal que calentaba sus conversaciones.
+        </p>
 
         <p>Todo comenzó con un sueño. Nuestro fundador, un apasionado Gestor Cultural, creció entre estas calles y se
           enamoró perdidamente de nuestras tradiciones. "¿Cómo puedo compartir este tesoro con el mundo?", se preguntaba
@@ -85,7 +116,8 @@
           lugar especial donde los locales presumen a sus amigos visitantes y donde los turistas encuentran el México
           auténtico que andaban buscando. Ven a compartir con nosotros. Deja que la música te envuelva, que los sabores
           te sorprendan y que el espíritu de nuestros antepasados te acompañe mientras descubres por qué decimos que
-          <em>MICTLAN</em> no es un bar, ¡es un abrazo de México en forma de experiencia!</p>
+          <em>MICTLAN</em> no es un bar, ¡es un abrazo de México en forma de experiencia!
+        </p>
 
         <div class="row my-5">
           <div class="col-md-6">
@@ -149,6 +181,7 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./backend/scripts/scripts.js"></script>
 </body>
 
 </html>

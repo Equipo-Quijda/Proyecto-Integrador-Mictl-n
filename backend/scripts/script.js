@@ -1,4 +1,4 @@
-let rutaJson = './backend/equipo.json';
+let rutaJson = '../backend/db/equipo.json';
 let container = '.carousel-inner';
 let botonesCarusel = '.carousel-indicators';
 let $ = element => document.querySelector(element);

@@ -10,15 +10,15 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="./style_index.css">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="../backend/css/style_index.css">
+  <link rel="stylesheet" href="../backend/css/style.css">
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container">
-      <a class="navbar-brand" href="./index.html">
-        <img src="./Pic/logo-mictlan.jpg" alt="Logo Mictlan">
+      <a class="navbar-brand" href="../index.html">
+        <img src="../Pic/logo-mictlan.jpg" alt="Logo Mictlan">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,21 +27,51 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="./index.html">Inicio</a>
+            <a class="nav-link" href="../index.html">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./aboutus.html">Nuestra Historia</a>
+            <a class="nav-link" href="./about.html">Nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./contact.html">Encuéntranos</a>
+            <a class="nav-link" href="./contact.html">Contacto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="./productos.html">Tienda</a>
+            <a class="nav-link active" href="./tienda.html">Tienda</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fas fa-shopping-cart"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <span class="nav-link text-light">|</span>
+          </li>
+          <li class="nav-item" id="login-in">
+            <a class="nav-link" href="./login.html">
+              <i class="fas fa-user-shield"></i> Login
+            </a>
+          </li>
+          <li class="nav-item" hidden id="login-out">
+            <a class="nav-link" href="../index.html">
+                <i class="fas fa-user"></i> Quijada
+            </a>
+        </li>
+        <li class="nav-item" hidden id="nav-productos">
+            <a class="nav-link" href="./products.html">
+                <i class="fas fa-box"></i> Productos
+            </a>
+        </li>
+        <li class="nav-item" hidden id="nav-usuarios">
+            <a class="nav-link active" href="./users.html">
+                <i class="fas fa-users"></i> Usuarios
+            </a>
+        </li>
         </ul>
       </div>
     </div>
   </nav>
+
+  <div class="particles" id="particles"></div>
 
   <div class="container main-content">
     <h1>Tienda</h1>
@@ -54,7 +84,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
-          <img src="./Pic/logo-mictlan.jpg" alt="Logo de Mictlan" style="width: 150px;">
+          <img src="../Pic/logo-mictlan.jpg" alt="Logo de Mictlan" style="width: 150px;">
           <p class="mt-3">El sabor de nuestra tierra en cada copa.</p>
         </div>
         <div class="col-md-4 text-center mb-2 mb-md-0">
@@ -82,7 +112,8 @@
     </div>
   </footer>
 
-  <script src="./product_scpt.js"></script>
+  <script src="../backend/scripts/target.js"></script>
+  <script src="../backend/scripts/scripts.js"></script>
 </body>
 
 </html>
