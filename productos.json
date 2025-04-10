@@ -1,13 +1,14 @@
 {
   "productos": [
     {
+      "id": "1",
       "nombre": "Whisky Premium",
       "precio": "10.00",
       "cantidad": "2",
       "presentacion": "6pzs",
       "descripcion": "Whisky de alta calidad con notas ahumadas y de caramelo. Perfecto para disfrutar solo o en cocteles. Ideal para ocasiones especiales.",
-      "imagen": "https://media.istockphoto.com/id/459392019/es/foto/vodka-smirnoff-botella.jpg?s=2048x2048&w=is&k=20&c=xQXtb6PlI8AsiG97Vs3Gu1YDI1hDMxiiQ5K_Qb7W4Uo=",
-      "id": "1"
+      "imagen": "https://media.istockphoto.com/id/459392019/es/foto/vodka-smirnoff-botella.jpg?s=2048x2048&w=is&k=20&c=xQXtb6PlI8AsiG97Vs3Gu1YDI1hDMxiiQ5K_Qb7W4Uo="
+      
     },
     {
       "id": "2",
