@@ -1,5 +1,5 @@
 const API_URL = "http://localhost:3000/productos";
-        let rutaJson = './db.json';
+        let rutaJson = '../productos.json';
         let containerSelector = '.container-productos';
         let productoSeleccionado = null;  // Variable global para el producto seleccionado
 
@@ -37,7 +37,7 @@ const API_URL = "http://localhost:3000/productos";
                 const response = await fetch(rutaJson);
                 const productos = await response.json();
                 container.innerHTML = '';  // Limpiar el contenedor antes de agregar los productos
-                productos.forEach(prod => {
+                productos.productos.forEach(prod => {
                     const tarjeta = crearTarjetaProducto(prod);
                     container.appendChild(tarjeta);
                 });
@@ -58,7 +58,7 @@ const API_URL = "http://localhost:3000/productos";
         
             cardDiv.innerHTML = `
                 <div class="imgBox">
-                    <img src="${imagenSrc}" alt="${nombreProducto}" border="0">
+                    <img width="60%" src="${imagenSrc}" alt="${nombreProducto}" border="0">
                 </div>
                 <div class="contentBox">
                     <h3>${nombreProducto}</h3>

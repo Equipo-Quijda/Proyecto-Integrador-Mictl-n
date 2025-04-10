@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if(localStorage.getItem('mictlanUser')){
         const user = JSON.parse(localStorage.getItem('mictlanUser'));
         updateNavbar(user);
-        console.log("Holis......");
     }else{
         navprod.hidden = true;
         navusers.hidden = true;

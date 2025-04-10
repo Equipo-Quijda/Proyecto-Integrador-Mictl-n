@@ -398,7 +398,7 @@ p{
 }
 
 .card-product:hover .imgBox img {
-  max-width: 50%;
+  max-width: 35%;
 }
 
 .card-product .contentBox {
@@ -524,9 +524,10 @@ p{
   gap: 15px;
   width: 100%;
   transition: 0.5s;
-  transform: translateY(20px);
+  transform: translateY(100px);
 }
 
 .card-product:hover #hiddens{
   visibility: visible;
+  transform: translateY(20px);
 }
