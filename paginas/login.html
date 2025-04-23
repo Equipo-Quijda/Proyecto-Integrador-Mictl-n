@@ -59,27 +59,30 @@
                 <p>Iniciando sesión en el Mictlan...</p>
             </div>
             
-            <h1 class="login-title">ACCESO AL INFRAMUNDO</h1>
-            
-            <form id="loginForm">
-                <div class="input-group">
-                    <label for="email"><i class="fas fa-envelope"></i> CORREO ELECTRÓNICO</label>
-                    <input type="email" id="email" required placeholder="tucorreo@mictlan.com">
-                </div>
+            <img src="../assets/IniciarSesion.svg" alt="Iniciar Sesión" class="login-svg">
+            <div class="login-content">
+                <h1 class="login-title">ACCESO AL INFRAMUNDO</h1>
                 
-                <div class="input-group">
-                    <label for="password"><i class="fas fa-key"></i> CONTRASEÑA</label>
-                    <input type="password" id="password" required placeholder="••••••••">
-                </div>
+                <form id="loginForm">
+                    <div class="input-group">
+                        <label for="email"><i class="fas fa-envelope"></i> CORREO ELECTRÓNICO</label>
+                        <input type="email" id="email" required placeholder="tucorreo@mictlan.com">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="password"><i class="fas fa-key"></i> CONTRASEÑA</label>
+                        <input type="password" id="password" required placeholder="••••••••">
+                    </div>
+                    
+                    <button type="submit" class="login-btn">
+                        <i class="fas fa-door-open"></i> ENTRAR AL MICTLAN
+                    </button>
+                </form>
                 
-                <button type="submit" class="login-btn">
-                    <i class="fas fa-door-open"></i> ENTRAR AL MICTLAN
-                </button>
-            </form>
-            
-            <div class="login-footer">
-                <p>¿Primera vez en el inframundo? <a href="#" id="registerLink">Regístrate aquí</a></p>
-                <p><a href="#" id="forgotLink">¿Olvidaste tu contraseña?</a></p>
+                <div class="login-footer">
+                    <p class="registerWelcome">¿Primera vez en el inframundo?<br> <a href="#" id="registerLink">Regístrate aquí</a></p>
+                    <p class="forgotPass"><a href="#" >¿Olvidaste tu contraseña?</a></p>
+                </div>
             </div>
         </div>
     </main>
