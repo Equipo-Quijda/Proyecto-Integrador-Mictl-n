@@ -11,9 +11,27 @@
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="../backend/css/style_index.css">
+  <link rel="stylesheet" href="./backend/css/age-verification.css">
 </head>
 
 <body>
+  <!-- Modal de verificación de edad -->
+  <div class="age-verification-overlay" id="ageVerificationModal">
+    <div class="age-verification-modal">
+      <div class="age-verification-image">
+        <img src="./assets/VerificarEdad.svg" alt="Verificación de Edad" class="verification-svg">
+        <div class="age-verification-content">
+          <h2>Verificación de Edad</h2>
+          <p>Bienvenido a <span style="color: var(--accent-color); font-weight: bold;">Mictlan</span>. Es necesario que confirmes tu edad para poder visualizar el contenido </p>
+          <div class="age-verification-buttons">
+            <button class="btn-confirm" id="confirmAge">Soy mayor de edad</button>
+            <button class="btn-cancel" id="cancelAge">No soy mayor de edad</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container">

@@ -17,8 +17,28 @@ document.addEventListener('DOMContentLoaded', function() {
         navlogout.hidden = true;
     }
 
+    // Verificar si el usuario ya confirmó su edad
+    checkAgeVerification();
+
     // Crear partículas en todas las páginas
     createParticles();
+
+    // Configurar eventos para los botones de verificación de edad
+    const confirmAgeBtn = document.getElementById('confirmAge');
+    const cancelAgeBtn = document.getElementById('cancelAge');
+    
+    if (confirmAgeBtn && cancelAgeBtn) {
+        confirmAgeBtn.addEventListener('click', () => {
+            // Guardar en localStorage que el usuario confirmó su edad
+            localStorage.setItem('ageVerified', 'true');
+            hideAgeVerificationModal();
+        });
+        
+        cancelAgeBtn.addEventListener('click', () => {
+            // Redirigir a una página apropiada para menores de edad
+            window.location.href = 'https://www.google.com';
+        });
+    }
 });
 
 function updateNavbar(user) {
@@ -76,4 +96,39 @@ function logout(){
     }
 
     window.location.href = '../index.html';
+}
+
+// Funciones para el modal de verificación de edad
+function checkAgeVerification() {
+    const ageVerificationModal = document.getElementById('ageVerificationModal');
+    
+    // Si no existe el modal en esta página, salir de la función
+    if (!ageVerificationModal) return;
+    
+    // Verificar si el usuario ya confirmó su edad anteriormente
+    if (localStorage.getItem('ageVerified') === 'true') {
+        hideAgeVerificationModal();
+    } else {
+        showAgeVerificationModal();
+    }
+}
+
+function hideAgeVerificationModal() {
+    const modal = document.getElementById('ageVerificationModal');
+    if (modal) {
+        // Aplicar animación de desvanecimiento
+        modal.style.animation = 'fadeOut 0.8s ease forwards';
+        
+        // Esperar a que termine la animación antes de ocultar completamente
+        setTimeout(() => {
+            modal.style.display = 'none';
+        }, 800); // Tiempo igual a la duración de la animación
+    }
+}
+
+function showAgeVerificationModal() {
+    const modal = document.getElementById('ageVerificationModal');
+    if (modal) {
+        modal.style.display = 'flex';
+    }
 }
