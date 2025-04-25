@@ -1,74 +1,54 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Verificar si ya hay sesión activa
-    if (localStorage.getItem('mictlanUser')) {
-        const user = JSON.parse(localStorage.getItem('mictlanUser'));
-        window.location.href = user.rol === 'admin' ? 'users.html' : '../index.html';
-    }
 
+    sessionStorage.removeItem('mictlanUser');
     const loginForm = document.getElementById('loginForm');
     const loading = document.getElementById('loading');
     
-    loginForm.addEventListener('submit', function(e) {
+    loginForm.addEventListener('submit', function (e) {
         e.preventDefault();
         
-        const email = document.getElementById('email').value;
+        const correo = document.getElementById('email').value;
         const password = document.getElementById('password').value;
         
         // Validación básica
-        if (!email || !password) {
+        if (!correo || !password) {
             showError('¡Ambos campos son requeridos!');
             return;
         }
-        
         // Mostrar animación de carga
         loading.style.display = 'flex';
         loginForm.style.opacity = '0.5';
         
-        // Simular tiempo de carga (en producción sería una petición AJAX)
-        setTimeout(() => {
-            // Simulación de usuarios
-            const users = [
-                {
-                    email: 'tezcatlipoca@mictlan.com',
-                    password: 'xibalba2023',
-                    nombre: 'Tezcatlipoca',
-                    avatar: 'tezcatlipoca.png',
-                    rol: 'user',
-                    rango: 'Explorador del Inframundo',
-                    ingresos: '2023-01-01',
-                    favoritos: ['Pulque Divino', 'Mezcal de Obsidiana', 'Tepache de Xibalba']
-                },
-                {
-                    email: 'mictlantecuhtli@mictlan.com',
-                    password: 'admin123',
-                    nombre: 'Mictlantecuhtli',
-                    avatar: 'quetzalcoatl.png',
-                    rol: 'admin',
-                    rango: 'Señor del Inframundo',
-                    ingresos: '2023-03-15',
-                    favoritos: ['Aguamiel Sagrada', 'Colonche de Tuna']
-                }
-            ];
-            
-            const user = users.find(u => u.email === email && u.password === password);
-            
+        var data = fetch('http://localhost:8080/usuarios/login', {
+            method: 'POST', // GET, POST, PUT, DELETE, etc.
+            headers: {
+                'Content-Type': 'application/json',
+                // Otros headers como Authorization
+            },
+            body: JSON.stringify({ correo, password }) // Enviar datos como JSON
+        })
+        .then(response => {
+            // Verificar si la respuesta es correcta
+            if (!response.ok) {
+                return false;
+            }
+            return response.json();
+         }).then(user => {
             if (!user) {
                 loading.style.display = 'none';
                 loginForm.style.opacity = '1';
                 showError('¡Credenciales incorrectas! Intenta nuevamente.');
                 return;
             }
-            
-            // Guardar en LocalStorage (sin password por seguridad)
+            console.log(user);
             const userToStore = {
                 ...user,
-                password: undefined
             };
-            localStorage.setItem('mictlanUser', JSON.stringify(userToStore));
+            sessionStorage.setItem('mictlanUser', JSON.stringify(userToStore));
             
             // Redirigir según rol
-            window.location.href = user.rol === 'admin' ? 'users.html' : './index.html';
-        }, 1500);
+            window.location.href = user.rol === 'admin' ? 'users.html' : '../index.html';
+         })
     });
     
     function showError(message) {

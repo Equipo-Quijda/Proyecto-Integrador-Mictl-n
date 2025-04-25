@@ -74,16 +74,90 @@
   <div class="particles" id="particles"></div>
 
   <div class="container main-content">
-    <h1>Tienda</h1>
-    <div class="container-productos">
+    <h1>Pagos</h1>
+    <div class="">
+    <div class="row">
+        <!-- Left Column -->
+        <div class="col">
+            <h2>Resumen de Productos</h2>
+            <ul class="list-group mb-4">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Producto 1
+                <span>$10.00</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Producto 2
+                <span>$15.00</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Producto 3
+                <span>$20.00</span>
+            </li>
+            </ul>
 
+            <h2>Dirección de Envío</h2>
+            <form class="mb-4">
+            <div class="mb-3">
+                <label for="direccion" class="form-label">Dirección</label>
+                <input type="text" class="form-control" id="direccion" placeholder="Calle, número, colonia">
+            </div>
+            <div class="mb-3">
+                <label for="ciudad" class="form-label">Ciudad</label>
+                <input type="text" class="form-control" id="ciudad" placeholder="Ciudad">
+            </div>
+            <div class="mb-3">
+                <label for="codigo-postal" class="form-label">Código Postal</label>
+                <input type="text" class="form-control" id="codigo-postal" placeholder="Código Postal">
+            </div>
+            </form>
+
+            <h2>Método de Pago</h2>
+            <form>
+            <div class="mb-3">
+                <label for="numero-tarjeta" class="form-label">Número de Tarjeta</label>
+                <input type="text" class="form-control" id="numero-tarjeta" placeholder="XXXX-XXXX-XXXX-XXXX" maxlength="19" oninput="validarTarjeta(this)">
+            </div>
+            <div class="mb-3">
+                <label for="fecha-expiracion" class="form-label">Fecha de Expiración</label>
+                <input type="text" class="form-control" id="fecha-expiracion" placeholder="MM/AA" maxlength="5" oninput="validarFechaExpiracion(this)">
+            </div>
+            <div class="mb-3">
+                <label for="cvv" class="form-label">CVV</label>
+                <input type="text" class="form-control" id="cvv" placeholder="XXX" maxlength="3" oninput="validarCVV(this)">
+            </div>
+            </form>
+        </div>
+
+
+        <!-- Right Column -->
+        <div class="col">
+            <h2>Resumen del Pago</h2>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Detalles</h5>
+                    <ul class="list-group mb-3">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Subtotal
+                            <span>$45.00</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Envío
+                            <span>$5.00</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Impuestos
+                            <span>$3.60</span>
+                        </li>
+                    </ul>
+                    <h4 class="d-flex justify-content-between align-items-center">
+                        Total
+                        <span>$53.60</span>
+                    </h4>
+                    <button class="btn btn-primary w-100 mt-3">Confirmar Pago</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-
-  <div class="container main-content">
-    <h1>Puebas</h1>
-    <div class="container-productos" id="rolesdecanela">
-
     </div>
   </div>
 
@@ -121,7 +195,7 @@
 
   <script src="../backend/scripts/target.js"></script>
   <script src="../backend/scripts/scripts.js"></script>
-  <script src="../backend/scripts/rolesdecanela.js"></script>
+    <script src="../backend/scripts/pasarela.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
