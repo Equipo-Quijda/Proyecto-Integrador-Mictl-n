@@ -167,15 +167,17 @@
 
 
 /* Media queries para responsividad */
-@media (max-width: 768px) {
+@media (max-width: 375px) {
     .login-svg {
-        width: 100%;
+        width: 100;
+        margin-top: 0px;
+
     }
     
     .login-container {
         max-width: 100%;
         height: auto;
-        min-height: 450px;
+        min-height: 400px;
     }
     
     .login-title {
@@ -209,7 +211,7 @@
     }
 
     .input-group i {
-        top: 30px; /* ajusta si los íconos se mueven raro */
+        top: 30px; 
         font-size: 0.8rem;
     }
 
