@@ -12,6 +12,7 @@
     rel="stylesheet">
   <link rel="stylesheet" href="../backend/css/style_index.css">
   <link rel="stylesheet" href="./backend/css/age-verification.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.2.4/pixi.min.js"></script>
 </head>
 
 <body>
@@ -90,77 +91,64 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="container">
-      <div class="row hero-content">
-        <div class="col-md-8 mx-auto text-center">
-          <h1 class="display-4 text-white">MICTLAN</h1>
-          <p class="lead text-center">¿Listo para un viaje a través de sabores que cuentan historias? Te damos la
-            bienvenida a nuestro rincón especial.</p>
-        </div>
+<section class="hero-section">
+  <div class="flame-overlay" id="flame-animation-container"></div>
+
+  <!-- SVG Animations -->
+  <img src="assets/indexanim.svg" class="animated-svg svg-anim-1" alt="Animación 1" />
+  <img src="assets/indexanimation.svg" class="animated-svg svg-anim-2" alt="Animación 2" />
+
+  <div class="container">
+    <div class="row hero-content">
+      <div class="col-md-8 mx-auto text-center">
+        <h1 class="display-4 text-white flame-title">MICTLAN</h1>
+        <p class="lead text-center">
+          ¿Listo para un viaje a través de sabores que cuentan historias?
+          Te damos la bienvenida a nuestro rincón especial.
+        </p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <div class="particles" id="particles"></div>
+<!-- Script para SVG -->
+<script src="backend/scripts/svg-hero-anim.js"></script>
 
-  <!-- Main Content -->
-  <div class="container">
+<!-- Partículas -->
+<div class="particles" id="particles"></div>
 
     <!-- Main Content -->
-    <div class="col-lg-12 col-md-8">
-      <div style="text-align: center;" class="main-content">
-        <h1>Nuestra Casa Es Tu Casa</h1>
-        <p>Aquí, en el corazón de Tecamachalco, Puebla, hemos creado más que un simple bar. ¡Bienvenido a
-          <em>MICTLAN</em>! Nacimos de un sueño compartido y del amor por nuestra tierra. ¿Sabías que nuestra región es
-          cuna de tierras fértiles donde el agave crece orgulloso? De estas plantas majestuosas nacen las bebidas que
-          han dado identidad a nuestro pueblo durante generaciones: el pulque que refrescaba a nuestros abuelos y el
-          mezcal que calentaba sus conversaciones.
-        </p>
-
-        <p>Todo comenzó con un sueño. Nuestro fundador, un apasionado Gestor Cultural, creció entre estas calles y se
-          enamoró perdidamente de nuestras tradiciones. "¿Cómo puedo compartir este tesoro con el mundo?", se preguntaba
-          mientras recorría los campos de maguey bajo el sol de Tecamachalco. Y así, junto a su hermano (quien además de
-          ser su mano derecha legal, se convirtió en su compañero de aventuras), decidieron crear un espacio donde cada
-          trago fuera un viaje en el tiempo.</p>
-
-        <p>¿Has sentido alguna vez que un lugar te habla? Eso es <em>MICTLAN</em>. Cada rincón tiene una historia que
-          contarte, desde los maestros mezcaleros que nos enseñaron sus secretos hasta los ancianos del pueblo que nos
-          confiaron sus recetas. No vendemos bebidas, compartimos historias embotelladas. Cada sorbo de nuestro pulque
-          te conecta con las manos que cultivaron el maguey, con la tierra que lo nutrió, con el sol que lo maduró. ¿No
-          es hermoso pensar que estás bebiendo historia viva?</p>
-
-        <p>Desde que abrimos nuestras puertas en octubre de 2019, hemos tenido el privilegio de convertirnos en ese
-          lugar especial donde los locales presumen a sus amigos visitantes y donde los turistas encuentran el México
-          auténtico que andaban buscando. Ven a compartir con nosotros. Deja que la música te envuelva, que los sabores
-          te sorprendan y que el espíritu de nuestros antepasados te acompañe mientras descubres por qué decimos que
-          <em>MICTLAN</em> no es un bar, ¡es un abrazo de México en forma de experiencia!
-        </p>
-
-        <div class="row my-5">
-          <div class="col-md-6">
-            <h2>Quijada: Nuestra Cerveza, Nuestro Orgullo</h2>
-            <p>¿Imaginas cómo sabe el amanecer sobre los valles de Tecamachalco? Después de 5 años compartiendo lo mejor
-              de nuestras tradiciones, nos atrevimos a soñar más grande. Así nació <em>Quijada</em>, no solo una
-              cerveza, sino nuestra carta de amor a esta tierra que tanto nos ha dado.</p>
-
-            <p>Cuando sostienes una <em>Quijada</em> en tus manos, sostienes artesanía pura. Cada lote es preparado con
-              el cuidado que solo las manos mexicanas saben dar. Seleccionamos a dedo las maltas más finas, buscamos ese
-              punto exacto de tostado que libera notas de caramelo que bailan en tu paladar, y elegimos lúpulos que
-              complementan, nunca compiten, con el carácter distintivo que queríamos lograr. ¿El resultado? Una cerveza
-              que habla por sí misma.</p>
-
-            <p>Y su nombre... ¡qué historia tiene! Cuando escuchas "Tecamachalco", estás pronunciando un poema náhuatl.
-              Nuestros ancestros tejieron tres palabras para describir este lugar mágico: "tetl" (piedra), "camachalli"
-              (quijada) y "co" (lugar). "El lugar de las quijadas de piedra" nos recuerda la fuerza y el carácter de
-              nuestras montañas, de nuestra gente, de nuestra cerveza. Cada vez que brindas con una <em>Quijada</em>,
-              celebras siglos de historia, de conexión con la tierra, de orgullo por nuestras raíces. ¿No vale la pena
-              probarla?</p>
-          </div>
-          <div class="col-md-6">
-            <img src="./Pic/Quijada.jpg" alt="Nuestra cerveza Quijada" class="product-img">
-            <p class="product-caption">Nuestra Quijada: donde tradición y sabor se encuentran en cada sorbo.</p>
-          </div>
+    <div class="container my-5">
+      <div class="row align-items-center mb-5 box-section">
+        <div class="col-md-6 order-md-2 mb-4 mb-md-0">
+          <img src="./indexproduct/492085732_1254307416705311_2124696839331979984_n.jpg" alt="Producto 1" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6 order-md-1">
+          <h1>Nuestra Casa Es Tu Casa</h1>
+          <p>Aquí, en el corazón de Tecamachalco, Puebla, hemos creado más que un simple bar. ¡Bienvenido a <em>MICTLAN</em>! Nacimos de un sueño compartido y del amor por nuestra tierra. ¿Sabías que nuestra región es cuna de tierras fértiles donde el agave crece orgulloso? De estas plantas majestuosas nacen las bebidas que han dado identidad a nuestro pueblo durante generaciones: el pulque que refrescaba a nuestros abuelos y el mezcal que calentaba sus conversaciones.</p>
+          <p>Todo comenzó con un sueño. Nuestro fundador, un apasionado Gestor Cultural, creció entre estas calles y se enamoró perdidamente de nuestras tradiciones. "¿Cómo puedo compartir este tesoro con el mundo?", se preguntaba mientras recorría los campos de maguey bajo el sol de Tecamachalco. Y así, junto a su hermano (quien además de ser su mano derecha legal, se convirtió en su compañero de aventuras), decidieron crear un espacio donde cada trago fuera un viaje en el tiempo.</p>
+        </div>
+      </div>
+      <div class="row align-items-center mb-5 box-section flex-md-row-reverse">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="./indexproduct/492350667_1260529172749802_4261107194886524625_n.jpg" alt="Producto 2" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6">
+          <p>¿Has sentido alguna vez que un lugar te habla? Eso es <em>MICTLAN</em>. Cada rincón tiene una historia que contarte, desde los maestros mezcaleros que nos enseñaron sus secretos hasta los ancianos del pueblo que nos confiaron sus recetas. No vendemos bebidas, compartimos historias embotelladas. Cada sorbo de nuestro pulque te conecta con las manos que cultivaron el maguey, con la tierra que lo nutrió, con el sol que lo maduró. ¿No es hermoso pensar que estás bebiendo historia viva?</p>
+          <p>Desde que abrimos nuestras puertas en octubre de 2019, hemos tenido el privilegio de convertirnos en ese lugar especial donde los locales presumen a sus amigos visitantes y donde los turistas encuentran el México auténtico que andaban buscando. Ven a compartir con nosotros. Deja que la música te envuelva, que los sabores te sorprendan y que el espíritu de nuestros antepasados te acompañe mientras descubres por qué decimos que <em>MICTLAN</em> no es un bar, ¡es un abrazo de México en forma de experiencia!</p>
+        </div>
+      </div>
+      <div class="row align-items-center box-section">
+        <div class="col-md-6 order-md-2 mb-4 mb-md-0">
+          <img src="./indexproduct/493405187_1261774865958566_4865150997988526443_n.jpg" alt="Producto 3" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6 order-md-1">
+          <h2>Quijada: Nuestra Cerveza, Nuestro Orgullo</h2>
+          <p>¿Imaginas cómo sabe el amanecer sobre los valles de Tecamachalco? Después de 5 años compartiendo lo mejor de nuestras tradiciones, nos atrevimos a soñar más grande. Así nació <em>Quijada</em>, no solo una cerveza, sino nuestra carta de amor a esta tierra que tanto nos ha dado.</p>
+          <p>Cuando sostienes una <em>Quijada</em> en tus manos, sostienes artesanía pura. Cada lote es preparado con el cuidado que solo las manos mexicanas saben dar. Seleccionamos a dedo las maltas más finas, buscamos ese punto exacto de tostado que libera notas de caramelo que bailan en tu paladar, y elegimos lúpulos que complementan, nunca compiten, con el carácter distintivo que queríamos lograr. ¿El resultado? Una cerveza que habla por sí misma.</p>
+          <p>Y su nombre... ¡qué historia tiene! Cuando escuchas "Tecamachalco", estás pronunciando un poema náhuatl. Nuestros ancestros tejieron tres palabras para describir este lugar mágico: "tetl" (piedra), "camachalli" (quijada) y "co" (lugar). "El lugar de las quijadas de piedra" nos recuerda la fuerza y el carácter de nuestras montañas, de nuestra gente, de nuestra cerveza. Cada vez que brindas con una <em>Quijada</em>, celebras siglos de historia, de conexión con la tierra, de orgullo por nuestras raíces. ¿No vale la pena probarla?</p>
+          <img src="./Pic/Quijada.jpg" alt="Nuestra cerveza Quijada" class="product-img mt-3">
+          <p class="product-caption">Nuestra Quijada: donde tradición y sabor se encuentran en cada sorbo.</p>
         </div>
       </div>
     </div>
@@ -200,6 +188,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="./backend/scripts/scripts.js"></script>
+  <script src="backend/scripts/flame-animation.js"></script>
 </body>
 
 </html>
