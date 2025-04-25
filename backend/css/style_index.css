@@ -169,7 +169,6 @@ h2::before {
 }
 
 p {
-  margin-bottom: 22px;
   text-align: justify;
   font-size: 1.05rem;
 }
@@ -368,10 +367,13 @@ footer p {
   font-size: 3.5rem;
   float: left;
   line-height: 0.8;
-
   color: var(--light-color);
   font-family: 'Playfair Display', serif;
   font-weight: bold;
+}
+
+span::first-letter {
+  text-transform: uppercase;
 }
 
 .cta-button {

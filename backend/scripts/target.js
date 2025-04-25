@@ -45,20 +45,15 @@ function crearTarjetaProducto(producto) {
 
     cardDiv.innerHTML = `
         <div class="imgBox">
-            <img width="60%" src="${imagenSrc}" alt="${producto.nombre}" border="0">
+            <img width="85%" src="${imagenSrc}" alt="${producto.nombre}" border="0">
         </div>
         <div class="contentBox">
-            <h3>${producto.nombre}</h3>
+            <h3 style="color:black; font-weight: bold;">${producto.nombre}</h3>
             <div id="hiddens">
                 <h2 class="price">${precioEntero}.<small>${precioDecimal}</small>$</h2>
-                <p class="descripcion">${producto.descripcion}</p>
-                <p class="inventario">Disponibles: ${producto.inventario}</p>
+                <span >${producto.descripcion}</span>
+                <span class="inventario">Disponibles: ${producto.inventario}</span>
                 <div class="cart-controls">
-                    <div class="selector-cantidad">
-                        <button class="boton-selector" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
-                        <input type="number" min="1" max="${producto.inventario}" value="1">
-                        <button class="boton-selector" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
-                    </div>
                     <a href="#" class="buy" onclick="agregarAlCarrito(${producto.id_producto})">Añadir al carrito</a>
                 </div>
             </div>
@@ -69,9 +64,28 @@ function crearTarjetaProducto(producto) {
 
 // Función para agregar productos al carrito
 function agregarAlCarrito(idProducto) {
-    const cantidad = document.querySelector(`#producto-${idProducto} input[type=number]`).value;
-    console.log(`Agregando producto ID: ${idProducto}, Cantidad: ${cantidad}`);
-    // Aquí puedes implementar la lógica para agregar al carrito
+    console.log(`Agregando producto ID: ${idProducto}, Cantidad: 1`);
+
+    // Obtener el carrito desde sessionStorage o inicializar uno nuevo
+    let carrito = JSON.parse(sessionStorage.getItem('carrito')) || [];
+
+    // Verificar si el producto ya está en el carrito
+    const productoExistente = carrito.find(item => item.idProducto === idProducto);
+
+    if (productoExistente) {
+        // Si el producto ya está en el carrito, actualizar la cantidad
+        productoExistente.cantidad += cantidad;
+    } else {
+        cantidad = 1;
+        // Si no está, agregarlo al carrito
+        carrito.push({ idProducto, cantidad });
+    }
+
+    // Guardar el carrito actualizado en sessionStorage
+    sessionStorage.setItem('carrito', JSON.stringify(carrito));
+
+    console.log('Carrito actualizado:', carrito);
+
 }
 
 // Cargar productos al iniciar

@@ -83,7 +83,6 @@
                         <tr>
                             <th scope="col">ID</th>
                             <th scope="col">Producto</th>
-                            <th scope="col">Foto</th>
                             <th scope="col">Descripción</th>
                             <th scope="col">Unidades</th>
                             <th scope="col">Precio</th>
@@ -92,54 +91,88 @@
                     </thead>
                     <tbody id="carrito-body">
                         <!-- Filas generadas dinámicamente con JavaScript -->
-                        <tr>
-                            <td>1</td>
-                            <td>Pulque Curado</td>
-                            <td><img src="../Pic/vino-tinto.jpg" alt="Foto de curado bien sabroso" class="img-fluid"
-                                    style="width: 50px;"></td>
-                            <td>Curado de guayaba.</td>
-                            <td>
-                                <button class="btn btn-sm btn-secondary" onclick="decrementarUnidad(1)">-</button>
-                                10
-                                <button class="btn btn-sm btn-secondary" onclick="incrementarUnidad(1)">+</button>
-                            </td>
-                            <td>$150.00</td>
-                            <td>
-                                <button class="btn btn-danger btn-sm" onclick="eliminarProducto(1)">Eliminar</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Pulque Curado</td>
-                            <td><img src="../Pic/vino-tinto.jpg" alt="Foto de curado bien sabroso" class="img-fluid"
-                                    style="width: 50px;"></td>
-                            <td>Curado de guayaba.</td>
-                            <td>
-                                <button class="btn btn-sm btn-secondary" onclick="decrementarUnidad(1)">-</button>
-                                10
-                                <button class="btn btn-sm btn-secondary" onclick="incrementarUnidad(1)">+</button>
-                            </td>
-                            <td>$150.00</td>
-                            <td>
-                                <button class="btn btn-danger btn-sm" onclick="eliminarProducto(1)">Eliminar</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Pulque Curado</td>
-                            <td><img src="../Pic/vino-tinto.jpg" alt="Foto de curado bien sabroso" class="img-fluid"
-                                    style="width: 50px;"></td>
-                            <td>Curado de guayaba.</td>
-                            <td>
-                                <button class="btn btn-sm btn-secondary" onclick="decrementarUnidad(1)">-</button>
-                                10
-                                <button class="btn btn-sm btn-secondary" onclick="incrementarUnidad(1)">+</button>
-                            </td>
-                            <td>$150.00</td>
-                            <td>
-                                <button class="btn btn-danger btn-sm" onclick="eliminarProducto(1)">Eliminar</button>
-                            </td>
-                        </tr>
+                        <script>
+                          
+                            async function cargarCarrito() {
+                                const carrito = JSON.parse(sessionStorage.getItem('carrito')) || [];
+                                const tbody = document.getElementById('carrito-body');
+                                const totalCell = document.getElementById('precio-final');
+                                tbody.innerHTML = ''; // Limpiar contenido previo
+                                let total = 0; // Inicializar el total
+
+                                for (const item of carrito) {
+                                    try {
+                                        const response = await fetch(`http://localhost:8080/productos/id/${item.idProducto}`);
+                                        if (!response.ok) throw new Error('Error al obtener datos del producto');
+                                        const producto = await response.json();
+
+                                        const subtotal = producto.precio * item.cantidad; // Calcular subtotal
+                                        total += subtotal; // Sumar al total
+
+                                        const fila = `
+                                            <tr>
+                                                <td>${producto.id_producto}</td>
+                                                <td>${producto.nombre}</td>
+                                                <td>${producto.descripcion}</td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-secondary" onclick="decrementarUnidad(${producto.id_producto})">-</button>
+                                                    ${item.cantidad}
+                                                    <button class="btn btn-sm btn-secondary" onclick="incrementarUnidad(${producto.id_producto})">+</button>
+                                                </td>
+                                                <td>$${subtotal.toFixed(2)}</td>
+                                                <td>
+                                                    <button class="btn btn-danger btn-sm" onclick="eliminarProducto(${producto.id_producto})">Eliminar</button>
+                                                </td>
+                                            </tr>
+                                        `;
+                                        tbody.innerHTML += fila;
+                                    } catch (error) {
+                                        console.error(`Error al cargar el producto con ID ${item.id}:`, error);
+                                    }
+                                }
+
+                                // Actualizar la celda de total
+                                totalCell.textContent = `$${total.toFixed(2)}`;
+                            }
+
+                            function incrementarUnidad(idProducto) {
+                                const carrito = JSON.parse(sessionStorage.getItem('carrito')) || [];
+                                const producto = carrito.find(item => item.idProducto === idProducto);
+                                if (producto) {
+                                    producto.cantidad += 1;
+                                    sessionStorage.setItem('carrito', JSON.stringify(carrito));
+                                    cargarCarrito();
+                                }
+                            }
+
+                            function decrementarUnidad(idProducto) {
+                                const carrito = JSON.parse(sessionStorage.getItem('carrito')) || [];
+                                const producto = carrito.find(item => item.idProducto === idProducto);
+                                if (producto && producto.cantidad > 1) {
+                                    producto.cantidad -= 1;
+                                    sessionStorage.setItem('carrito', JSON.stringify(carrito));
+                                    cargarCarrito();
+                                }
+                            }
+
+                            function eliminarProducto(idProducto) {
+                                let carrito = JSON.parse(sessionStorage.getItem('carrito')) || [];
+                                carrito = carrito.filter(item => item.idProducto !== idProducto);
+                                sessionStorage.setItem('carrito', JSON.stringify(carrito));
+                                cargarCarrito();
+                            }
+
+                            function cancelarCompra() {
+                                if (confirm('¿Estás seguro de que deseas cancelar la compra?')) {
+                                    sessionStorage.removeItem('carrito');
+                                    cargarCarrito();
+                                }
+                            }
+
+
+                            document.addEventListener('DOMContentLoaded', cargarCarrito);
+                        </script>
+                        
                     </tbody>
                 </table>
                 <div class="mt-4">
@@ -195,7 +228,6 @@
         </div>
     </footer>
 
-    <script src="../backend/scripts/produc.js"></script>
     <script src="../backend/scripts/scripts.js"></script>
     <script src="../backend/scripts/carrito.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

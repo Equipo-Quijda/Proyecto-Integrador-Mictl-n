@@ -403,7 +403,6 @@ p{
 
 .card-product .contentBox {
   position: relative;
-  padding: 0 20px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -433,7 +432,7 @@ p{
   background-color: #ffce00;
   color: #000000;
   border: none;
-  padding: 10px 20px;
+
   font-size: 0.6em;
   cursor: pointer;
   transition: all 0.3s;
@@ -530,4 +529,12 @@ p{
 .card-product:hover #hiddens{
   visibility: visible;
   transform: translateY(20px);
+}
+
+.contentBox p {
+  font-size: 0.8em; 
+  color: white;
+  font-weight: 400;
+  margin: 0;
+  text-align: center;
 }
