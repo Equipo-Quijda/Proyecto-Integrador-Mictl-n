@@ -39,10 +39,10 @@
                         <a class="nav-link" href="./tienda.html">Tienda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./carrito.html">
-                          <i class="fas fa-shopping-cart"></i>
+                        <a class="nav-link active" href="#">
+                            <i class="fas fa-shopping-cart"></i>
                         </a>
-                      </li>
+                    </li>
                     <li class="nav-item">
                         <span class="nav-link text-light">|</span>
                     </li>
@@ -57,7 +57,7 @@
                         </a>
                     </li>
                     <li class="nav-item" hidden id="nav-productos">
-                        <a class="nav-link active" href="./products.html">
+                        <a class="nav-link" href="./products.html">
                             <i class="fas fa-box"></i> Productos
                         </a>
                     </li>
@@ -73,66 +73,93 @@
 
     <div class="particles" id="particles"></div>
 
-    <div class="container mt-4">
-        <div class="row" style="margin-bottom: 100px;">
-            <div class="col-md-7" >
-                <div class="card bg-dark text-white p-4">
-                    <h2 class="text-center text-warning">Gestión de Productos</h2>
-                    <form>
-                        <div class="mb-3">
-                            <div class="form-group">
-                                <label for="nombre">Nombre del producto</label>
-                                <label for="id" id="id_producto" hidden></label>
-                                <input type="text" class="form-control" id="nombre"
-                                    placeholder="Ingrese el nombre del producto" required>
-                                <div class="invalid-feedback">
-                                    Solo se permiten letras (no números ni caracteres especiales)
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mb-3 row">
-                            <div class="col-md-6">
-                                <label for="precio" class="form-label">Precio (MXN)</label>
-                                <input type="number" min="0"
-                                    onkeydown="return event.keyCode !== 69 && event.keyCode !== 189"
-                                    class="form-control" id="precio" placeholder="Ingrese el precio">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="cantidad" class="form-label">Cantidad</label>
-                                <input type="number" min="0"
-                                    onkeydown="return event.keyCode !== 69 && event.keyCode !== 189"
-                                    class="form-control" id="cantidad" placeholder="Ingrese la cantidad">
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="descripcion" class="form-label">Descripción</label>
-                            <textarea class="form-control" id="descripcion" rows="3"
-                                placeholder="Ingrese una descripción"></textarea>
-                        </div>
-                        <div class="mb-3">
-                            <label for="imagen" class="form-label">Imagen del producto (URL)</label>
-                            <input type="url" class="form-control" id="imagen"
-                                placeholder="Ingrese la URL de la imagen">
-                        </div>
-                        <div class="text-center d-flex justify-content-between">
-                            <button type="button" class="btn btn-warning flex-fill me-2" style="max-width: 24%;" onclick="editarProducto()">Actualizar producto</button>
-                            <button type="button" class="btn btn-success flex-fill me-2" style="max-width: 24%;" onclick="guardarProducto()">Guardar nuevo producto</button>
-                            <button type="button" class="btn btn-danger flex-fill me-2" style="max-width: 24%;" onclick="eliminarProducto()">Eliminar producto</button>
-                            <button type="button" class="btn btn-secondary flex-fill" style="max-width: 24%;" onclick="limpiarCampos()">Limpiar</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="col-md-5">
-                <div class="card bg-dark text-white p-4">
-                    <h2 class="text-center text-warning">Lista de Productos</h2>
-                    <div id="lista-productos" class="row">
+    <div class="container main-content">
+        <h1>Carrito</h1>
+        <div class="container-productos">
+           
+            <div class="container mt-4">
+                <table class="table table-hover table-dark">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Producto</th>
+                            <th scope="col">Foto</th>
+                            <th scope="col">Descripción</th>
+                            <th scope="col">Unidades</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="carrito-body">
+                        <!-- Filas generadas dinámicamente con JavaScript -->
+                        <tr>
+                            <td>1</td>
+                            <td>Pulque Curado</td>
+                            <td><img src="../Pic/vino-tinto.jpg" alt="Foto de curado bien sabroso" class="img-fluid"
+                                    style="width: 50px;"></td>
+                            <td>Curado de guayaba.</td>
+                            <td>
+                                <button class="btn btn-sm btn-secondary" onclick="decrementarUnidad(1)">-</button>
+                                10
+                                <button class="btn btn-sm btn-secondary" onclick="incrementarUnidad(1)">+</button>
+                            </td>
+                            <td>$150.00</td>
+                            <td>
+                                <button class="btn btn-danger btn-sm" onclick="eliminarProducto(1)">Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Pulque Curado</td>
+                            <td><img src="../Pic/vino-tinto.jpg" alt="Foto de curado bien sabroso" class="img-fluid"
+                                    style="width: 50px;"></td>
+                            <td>Curado de guayaba.</td>
+                            <td>
+                                <button class="btn btn-sm btn-secondary" onclick="decrementarUnidad(1)">-</button>
+                                10
+                                <button class="btn btn-sm btn-secondary" onclick="incrementarUnidad(1)">+</button>
+                            </td>
+                            <td>$150.00</td>
+                            <td>
+                                <button class="btn btn-danger btn-sm" onclick="eliminarProducto(1)">Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Pulque Curado</td>
+                            <td><img src="../Pic/vino-tinto.jpg" alt="Foto de curado bien sabroso" class="img-fluid"
+                                    style="width: 50px;"></td>
+                            <td>Curado de guayaba.</td>
+                            <td>
+                                <button class="btn btn-sm btn-secondary" onclick="decrementarUnidad(1)">-</button>
+                                10
+                                <button class="btn btn-sm btn-secondary" onclick="incrementarUnidad(1)">+</button>
+                            </td>
+                            <td>$150.00</td>
+                            <td>
+                                <button class="btn btn-danger btn-sm" onclick="eliminarProducto(1)">Eliminar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="mt-4">
+                    <table class="table table-bordered">
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col">Total</th>
+                                <th scope="col" id="precio-final">$0.00</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <div class="d-flex justify-content-end">
+                        <button class="btn btn-success me-2" onclick="continuarCompra()">Continuar Compra</button>
+                        <button class="btn btn-secondary" onclick="cancelarCompra()">Cancelar</button>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
-
     <footer class="bg-dark text-white">
         <div class="container">
             <div class="row">
@@ -170,6 +197,7 @@
 
     <script src="../backend/scripts/produc.js"></script>
     <script src="../backend/scripts/scripts.js"></script>
+    <script src="../backend/scripts/carrito.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

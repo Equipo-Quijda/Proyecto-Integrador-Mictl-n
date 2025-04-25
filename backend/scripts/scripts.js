@@ -4,11 +4,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const navlogin = document.getElementById('login-in');
     const navlogout = document.getElementById('login-out');
 
-    navlogout.addEventListener('click', () => logout());
+    if (document.getElementById('logoutButton')){
+        const logoutButton = document.getElementById('logoutButton');
+        logoutButton.addEventListener('click', () => logout());
+    }
+
 
     // Verificar sesión y actualizar navbar
-    if(localStorage.getItem('mictlanUser')){
-        const user = JSON.parse(localStorage.getItem('mictlanUser'));
+    if(sessionStorage.getItem('mictlanUser')){
+        const user = JSON.parse(sessionStorage.getItem('mictlanUser'));
         updateNavbar(user);
     }else{
         navprod.hidden = true;
@@ -30,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (confirmAgeBtn && cancelAgeBtn) {
         confirmAgeBtn.addEventListener('click', () => {
             // Guardar en localStorage que el usuario confirmó su edad
-            localStorage.setItem('ageVerified', 'true');
+            sessionStorage.setItem('ageVerified', 'true');
             hideAgeVerificationModal();
         });
         
@@ -46,20 +50,21 @@ function updateNavbar(user) {
     const navusers = document.getElementById('nav-usuarios');
     const navlogin = document.getElementById('login-in');
     const navlogout = document.getElementById('login-out');
+    const navperfil = document.getElementById('navperfil');
     
     if (user) {
         
         navlogin.hidden = true;
 
         // Agregar link de admin si corresponde
-        if (user.rol === 'admin') {
+        if (user.rolId === 1) {
             navprod.hidden = false;
             navusers.hidden = false;
         }
         
-        navlogout.innerHTML = `<a class="nav-link" href="#">
+        navperfil.innerHTML = `
               <i class="fas fa-user"></i> ${user.nombre}
-          </a>`;
+          `;
 
         navlogout.hidden = false;
 
@@ -89,8 +94,8 @@ function createParticles() {
 }
 
 function logout(){
-    if(localStorage.getItem('mictlanUser')){
-        localStorage.removeItem('mictlanUser');
+    if(sessionStorage.getItem('mictlanUser')){
+        sessionStorage.removeItem('mictlanUser');
         console.log("Documento eliminado con exito......");
         location.reload();
     }
@@ -106,7 +111,7 @@ function checkAgeVerification() {
     if (!ageVerificationModal) return;
     
     // Verificar si el usuario ya confirmó su edad anteriormente
-    if (localStorage.getItem('ageVerified') === 'true') {
+    if (sessionStorage.getItem('ageVerified') === 'true') {
         hideAgeVerificationModal();
     } else {
         showAgeVerificationModal();
