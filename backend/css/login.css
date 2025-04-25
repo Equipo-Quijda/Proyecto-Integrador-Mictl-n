@@ -1,26 +1,51 @@
 /* Estilos para login.html */
 .login-container {
     position: relative;
-    max-width: 500px;
+    max-width: 600px;
     margin: 5rem auto;
-    padding: 3rem;
-    background: rgba(0, 0, 0, 0.8);
-    border: 1px solid var(--primary-gold);
-    border-radius: 10px;
-    box-shadow: var(--accent-glow);
+    padding: 0;
     z-index: 10;
+    transition: all 0.5s ease;
+    height: 500px;
+    margin-top: 400px;
+}
+
+.login-svg {
+    width: 140%;
+    height: auto;
+    display: block;
+    margin:  auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(0 0 15px rgba(64, 224, 208, 0.7));
     transition: all 0.5s ease;
 }
 
-.login-container:hover {
-    box-shadow: 0 0 30px rgba(64, 224, 208, 0.9);
+.login-container:hover .login-svg {
+    filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.8));
+}
+
+.login-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    transform: translate(-50%, -50%);
 }
 
 .login-title {
     text-align: center;
     color: var(--primary-gold);
-    margin-bottom: 2rem;
-    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
     text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
     letter-spacing: 3px;
 }
@@ -33,7 +58,7 @@
 .input-group label {
     display: block;
     margin-bottom: 0.5rem;
-    color: var(--secondary-turquoise);
+   
     font-size: 1rem;
     letter-spacing: 1px;
 }
@@ -94,11 +119,12 @@
 }
 
 .login-footer a {
-    color: var(--secondary-turquoise);
+    color: var(--primary-gold);
     text-decoration: none;
     transition: all 0.3s;
     border-bottom: 1px dashed var(--secondary-turquoise);
     padding-bottom: 2px;
+   
 }
 
 .login-footer a:hover {
@@ -131,4 +157,73 @@
     border-radius: 50%;
     animation: spin 1s linear infinite;
     margin-bottom: 1rem;
+}
+
+.registerWelcome, .forgotPass {
+    font-size: 1rem;
+    text-align: center;
+
+}
+
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    .login-svg {
+        width: 100%;
+    }
+    
+    .login-container {
+        max-width: 100%;
+        height: auto;
+        min-height: 450px;
+    }
+    
+    .login-title {
+        font-size: 1.2rem;
+    }
+    
+    .input-group input {
+        padding: 0.1rem;
+    }
+    
+    .login-btn {
+        padding: 0.1rem;
+    }
+
+    .login-content {
+        padding: 1rem;
+    }
+
+    .login-title {
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+
+    .input-group label {
+        font-size: 0.8rem;
+    }
+
+    .input-group input {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .input-group i {
+        top: 30px; /* ajusta si los íconos se mueven raro */
+        font-size: 0.8rem;
+    }
+
+    .login-btn {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+        margin-top: 0.5rem;
+    }
+
+    .login-footer {
+        font-size: 0.8rem;
+    }
+    .login-footer a {
+        font-size: 0.8rem;
+    }
 }
